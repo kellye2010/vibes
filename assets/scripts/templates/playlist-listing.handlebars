@@ -1,0 +1,26 @@
+{{#each playlists as |playlist|}}
+
+  <!-- {{> partial}}
+  Don't uncomment yet -->
+
+   <!-- Developers, why are we using data-id and not just id? -->
+   <ul data-id="{{playlist.id}}">
+     <li> <small>Title: {{playlist.title}}</small></li>
+     <!-- {{#if book.description}}
+        <li>{{book.description}}</li>
+     {{else}}
+        <li>No description.</li>
+      {{/if}} -->
+      <li><button type="button" name="button">Remove</button></li>
+
+      {{#if playlist.name}}
+      <li>{{playlist.name}} <button class="remove-task-button btn btn-transparent-two" data-id="{{playlist.id}}">Remove</button></li>
+        <!-- <li><button class="remove">Remove</button> -->
+      {{else}}
+        <li> No Playlist Name Entered <button class="remove-task-button btn btn-transparent-two" data-id="{{task.id}}">Remove</button></li>
+        <!-- <li><button class="remove">Remove</button> -->
+      {{/if}}
+
+   </ul>
+
+{{/each}}

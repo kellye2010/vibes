@@ -14,114 +14,112 @@
 </head>
 
 <body class="container-fluid">
-  <header>
+  <nav>
+    <button type="button" class="btn btn btn-default" data-toggle="modal" data-target="#signUpModal">Sign up</button>
+    <button type="button" class="btn btn btn-default" data-toggle="modal" data-target="#signOutModal">Sign out</button>
+    <button type="button" class="btn btn btn-default" data-toggle="modal" data-target="#signInModal">Sign in</button>
+    <button type="button" class="btn btn btn-default" data-toggle="modal" data-target="#changePasswordModal">Change Password</button>
+  </nav>
 
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
-    <!-- Sign Up Modal -->
-    <div id="signUpModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Sign Up Below</h4>
-          </div>
-          <div class="modal-body">
-            <!-- <p>Some text in the modal.</p> -->
-            <input type="text" name="credentials[email]" placeholder="email">
-            <input type="password" name="credentials[password]" placeholder="password">
-            <input type="password" name="credentials[password_confirmation]" placeholder="password_confirmation">
-            <input type="submit" name="submit" value="Sign up!">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+  <!-- Sign Up Modal -->
+  <div id="signUpModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Don't forget to sign up!</h4>
+        </div>
+        <div class="modal-body">
+          <form id="sign-up">
+            <fieldset>
+              <input name="credentials[email]" type="text" placeholder="create account">
+              <input name="credentials[password]" type="password" placeholder="password">
+              <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+              <button class="btn btn-transparent-three" type="submit" name="submit">Sign Up!</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
         </div>
       </div>
     </div>
+  </div>
 
+  <!--Sign in Modal -->
+  <div id="signInModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signInModal">Sign In</button>
-    <!-- Sign In Modal -->
-    <div id="signInModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Sign In</h4>
-          </div>
-          <div class="modal-body">
-            <!-- <p>Some text in the modal.</p> -->
-            <input type="text" name="credentials[email]" placeholder="email">
-            <input type="password" name="credentials[password]" placeholder="password">
-            <input type="submit" name="submit" value="Sign In">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Don't forget to sign in!</h4>
+        </div>
+        <div class="modal-body">
+          <form id="sign-in">
+            <fieldset>
+              <input name="credentials[email]" type="text" placeholder="your username">
+              <input name="credentials[password]" type="password" placeholder="password">
+              <button class="btn btn-transparent-three" type="submit" name="submit">Sign In!</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
         </div>
       </div>
     </div>
+  </div>
 
+  <!-- Sign Out Modal -->
+  <div id="signOutModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#changePasswordModal">Change Password</button>
-    <!-- Sign Up Modal -->
-    <div id="changePasswordModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Change Your Password Below</h4>
-          </div>
-          <div class="modal-body">
-            <!-- <p>Some text in the modal.</p> -->
-            <input type="password" name="passwords[old]" placeholder="old password">
-            <input type="password" name="passwords[new]" placeholder="new password">
-            <input type="submit" name="submit" value="Change Password">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Are you sure want to sign out?</h4>
         </div>
-      </div>
-    </div>
-
-
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signOutModal">Sign Out</button>
-    <!-- Sign Up Modal -->
-    <div id="signOutModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Sign Out</h4>
-          </div>
-          <div class="modal-body">
-            <p>Are you sure you want to leave already?</p>
-            <!-- <input type="password" name="passwords[old]" placeholder="old password">
-        <input type="password" name="passwords[new]" placeholder="new password">
-        <input type="submit" name="submit" value="Change Password"> -->
+        <div class="modal-body">
+          <form id="sign-out">
             <fieldset>
               <button class="btn btn-transparent-three" type="submit" name="submit">Sign Out!</button>
             </fieldset>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Change Passwrord Modal -->
+  <div id="changePasswordModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">You can even put your password on your list!</h4>
+        </div>
+        <div class="modal-body">
+          <form id="change-password">
+            <fieldset>
+              <input name="passwords[old]" type="password" placeholder="old password">
+              <input name="passwords[new]" type="password" placeholder=" new password">
+              <button class="btn btn-transparent-three" type="submit" name="submit">Change Password!</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
         </div>
       </div>
     </div>
-
-
-  </header>
+  </div>
 
   <h1>Example</h1>
 
@@ -178,12 +176,29 @@
 
 
   <div class="playlist-box">
-    <form class='user-playlists'>
+    <!-- <form class='user-playlists'>
       <button type="submit" class="btn btn-default">Get all Playlists</button>
-    </form>
-
+    </form> -->
     <div>
+
       <h1>Playlist CRUD</h1>
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create Your Playlist</h4>
+        </div>
+        <form id="new-playlist">
+          <fieldset>
+            <input class="listInputTwo" type="text" name="playlist[name]">
+            <button class="btn btn-transparent-three" type="submit" name="submit"> CREATE </button>
+          </fieldset>
+        </form>
+      </div>
+
+
+
       <h2>Get All Playlists</h2>
       <form class='books' id='books-search'>
         <div class="form-group">

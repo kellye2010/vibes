@@ -18,6 +18,7 @@ const signInSuccess = (data) => {
   $('.container').show()
   $('#signInModal').modal('hide')
   // $('input').val('')
+  store.user = data.user
 }
 
 const signInFailure = () => {
@@ -44,20 +45,13 @@ const changePasswordFailure = () => {
 
 const signOutSuccess = (data) => {
   $('.').text("What's Your Vibe?")
-  $('.container').hide()
-  $('.defText').show()
-  $('.hideOnStart').hide()
-  $('.hideOnStartTwo').hide()
-  $('.hideOnSignIn').show()
-  $('.hideOnSignInTwo').show()
-  $('.UAtext').show()
   $('#signOutModal').modal('hide')
   // store the user with a value of null as per below
   store.user = null
 }
 
 const signOutFailure = () => {
-  $('.UAtext').text('Sign out faulire!')
+  // $('.userAuth').text('Sign out faulire!')
   $('#signOutModal').modal('hide')
 }
 

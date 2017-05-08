@@ -15,10 +15,10 @@ require('./example')
 
 const authEvents = require('./auth/events.js')
 
-const playlist = require('./playlist')
+const playlistEvents = require('./playlist/events.js')
 
 // On document ready
 $(() => {
   authEvents.addHandlers()
-  playlist.buildPlaylist()
+  playlistEvents.buildPlaylist()
 })
