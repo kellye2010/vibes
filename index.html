@@ -174,14 +174,14 @@
     </fieldset>
   </form> -->
 
-
+  <h1>Playlist CRUD</h1>
   <div class="playlist-box">
     <!-- <form class='user-playlists'>
       <button type="submit" class="btn btn-default">Get all Playlists</button>
     </form> -->
     <div>
 
-      <h1>Playlist CRUD</h1>
+      <!-- <h1>Playlist CRUD</h1> -->
 
       <!-- Modal content-->
       <div class="modal-content">
@@ -191,46 +191,51 @@
         </div>
         <form id="new-playlist">
           <fieldset>
-            <input class="listInputTwo" type="text" name="playlist[name]">
-            <button class="btn btn-transparent-three" type="submit" name="submit"> CREATE </button>
+            <input class="playlistInputTwo" type="text" name="playlist[title]">
+            <button class="btn btn-default snip1564" type="submit" name="submit"> CREATE </button>
           </fieldset>
         </form>
       </div>
 
 
 
-      <h2>Get All Playlists</h2>
-      <form class='books' id='books-search'>
+      <h2>Show All Playlists</h2>
+      <form class='playlists' id='playlists-search'>
         <div class="form-group">
         </div>
-        <button type="submit" class="btn btn-default">Get All Playlists</button>
+        <button type="submit" class="btn btn-default snip1564">Get All Playlists</button>
       </form>
+
       <br />
-      <h2>Get One Playlist</h2>
-      <form class='books' id='book-search'>
+
+      <h2>Show A Playlist</h2>
+      <form class='playlists' id='playlist-search'>
         <div class="form-group">
-          <input type="text" name="book[id]" id="book-id" placeholder="Playlist ID Here">
+          <input type="text" name="playlist[id]" id="playlist-id" placeholder="Playlist ID Here">
         </div>
-        <button type="submit" class="btn btn-default">Get Playlist</button>
+        <button type="submit" class="btn btn-default snip1564">Get Playlist</button>
       </form>
 
-      <h2>Delete One Playlist</h2>
-      <form class='books' id='book-delete'>
+      <h2>Update A Playlist</h2>
+      <form class='playlists' id='playlist-update'>
         <div class="form-group">
-          <input type="text" name="book[id]" id="book-id-delete" placeholder="Playlist ID Here">
-        </div>
-        <button type="submit" class="btn btn-default">Delete Playlist</button>
-      </form>
-
-      <h2>Update One Playlist</h2>
-      <form class='books' id='book-update'>
-        <div class="form-group">
-          <input type="text" name="book[id]" id="book-id-update" placeholder="Playlist ID Here">
-          <input type="text" name="book[title]" author="book-title-update" placeholder="Playlist Title Here">
+          <input type="text" name="playlist[id]" id="playlist-id-update" placeholder="Playlist ID Here">
+          <!-- <input type="text" name="book[title]" author="book-title-update" placeholder="Playlist Title Here"> -->
+          <input type="text" name="playlist[title]" title="playlist-title-update" placeholder="Playlist Title Here">
           <!-- <input type="text" name="book[author]" author="book-author-update" placeholder="Resource Author Here"> -->
         </div>
-        <button type="submit" class="btn btn-default">Update Playlist</button>
+        <button type="submit" class="btn btn-default snip1564">Update Playlist</button>
       </form>
+
+      <h2>Delete A Playlist</h2>
+      <form class='playlists' id='playlist-delete'>
+        <div class="form-group">
+          <input type="text" name="playlist[id]" id="playlist-id-delete" placeholder="Playlist ID Here">
+        </div>
+        <button type="submit" class="btn btn-default snip1564">Delete Playlist</button>
+      </form>
+
+
     </div>
   </div>
   <footer>
