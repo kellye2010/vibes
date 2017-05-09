@@ -1,26 +1,70 @@
 'use strict'
+// const store = require('../store.js')
+// const showPlaylistsTemplate = require('../templates/playlist-list.handlebars')
 
-const onSuccess = function (data) {
-  console.log('data is ', data)
-  if (!data) {
-    console.warn('Either you deleted something, or something went wrong.')
-  } else if (data.playlist) {
-    console.log(data.playlist)
-  } else {
-    console.table(data.playlists)
-  }
+// const api = require('./api.js')
+// // const getFormFields = require(`../../../lib/get-form-fields`)
+
+const createPlaylistSuccess = (data) => {
+  console.log(data, 'this is data')
+
+  // $('input').val('')
+  // $('#newPlaylistModal').modal('hide')
+  // $('.center').empty()
 }
 
-const onUpdateSuccess = function () {
-  console.log('You successfully updated your playlist!')
+const createPlaylistFailure = () => {
+  // $('input').val('')
+  // $('#newPlaylistModal').modal('hide')
+  // $('.message').text('Try again')
 }
 
-const onError = function (response) {
-  console.error(response)
+const indexPlaylistSuccess = (data) => {
+  console.log(data, 'this is data')
+  // const showPlaylistsHtml = showPlaylistsTemplate({ playlists: response.playlists })
+  // $('.showIndexMessage').append(showPlaylistsHtml)
+  // $('.message').text('')
+}
+
+const indexPlaylistFailure = () => {
+  // $('.message').text('')
+}
+
+const showPlaylistSuccess = (data) => {
+  console.log(data, 'this is data')
+  // $('.message').text('')
+}
+
+const showPlaylistFailure = () => {
+  // $('.message').text('')
+
+}
+
+const updatePlaylistSuccess = (response) => {
+
+}
+
+const updatePlaylistFailure = (response) => {
+  $('.message').text('')
+}
+
+const deletePlaylistSuccess = (response) => {
+
+}
+
+const deletePlaylistFailure = (response) => {
+  $('.message').text('')
 }
 
 module.exports = {
-  onSuccess,
-  onUpdateSuccess,
-  onError
+  createPlaylistSuccess,
+  createPlaylistFailure,
+  indexPlaylistSuccess,
+  indexPlaylistFailure,
+  showPlaylistSuccess,
+  showPlaylistFailure,
+  updatePlaylistSuccess,
+  updatePlaylistFailure,
+  deletePlaylistSuccess,
+  deletePlaylistFailure
 }

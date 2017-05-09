@@ -7,17 +7,17 @@ const signUpSuccess = (data) => {
 }
 
 const signUpFailure = () => {
-  // $('.').text('Sign up failed!')
+  $('.message').text('Sign up failed!')
   $('#signUpModal').modal('hide')
   // $('input').val('')
 }
 
 // add shows where applicable
 const signInSuccess = (data) => {
-  // $('.').text('Create your playlist!')
+  $('.message').text('Create your playlist!')
   $('.container').show()
   $('#signInModal').modal('hide')
-  // $('input').val('')
+  $('input').val('')
   store.user = data.user
 }
 
@@ -28,9 +28,9 @@ const signInFailure = () => {
 }
 
 const changePasswordSuccess = (data) => {
-  // $('.').text('Password Successfully Changed!')
+  $('.message').text('Password Successfully Changed!')
   $('#changePasswordModal').modal('hide')
-  // $('input').val('')
+  $('input').val('')
 }
 
 //   // store the user object as per below
@@ -38,9 +38,9 @@ const changePasswordSuccess = (data) => {
 // }
 
 const changePasswordFailure = () => {
-  // $('.').text('Error Changing Password!')
+  $('.message').text('Error Changing Password!')
   $('#changePasswordModal').modal('hide')
-  // $('input').val('')
+  $('input').val('')
 }
 
 const signOutSuccess = (data) => {
@@ -51,7 +51,7 @@ const signOutSuccess = (data) => {
 }
 
 const signOutFailure = () => {
-  // $('.userAuth').text('Sign out faulire!')
+  $('.message').text('Sign out faulire!')
   $('#signOutModal').modal('hide')
 }
 

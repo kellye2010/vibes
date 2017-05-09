@@ -20,5 +20,5 @@ const playlistEvents = require('./playlist/events.js')
 // On document ready
 $(() => {
   authEvents.addHandlers()
-  playlistEvents.buildPlaylist()
+  playlistEvents.addHandlers()
 })
