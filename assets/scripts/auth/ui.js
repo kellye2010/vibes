@@ -3,28 +3,28 @@ const store = require('../store.js')
 
 const signUpSuccess = (data) => {
   $('#signUpModal').modal('hide')
-  // $('input').val('')
+  $('input').val('')
 }
 
 const signUpFailure = () => {
   $('.message').text('Sign up failed!')
   $('#signUpModal').modal('hide')
-  // $('input').val('')
+  $('input').val('')
 }
 
 // add shows where applicable
 const signInSuccess = (data) => {
   $('.message').text('Create your playlist!')
-  $('.container').show()
+  $('.playlist-box').show()
   $('#signInModal').modal('hide')
   $('input').val('')
   store.user = data.user
 }
 
 const signInFailure = () => {
-  // $('.').text('Sign in failed!')
+  $('.message').text('Sign in failed!')
   $('#signInModal').modal('hide')
-  // $('input').val('')
+  $('input').val('')
 }
 
 const changePasswordSuccess = (data) => {
@@ -44,7 +44,7 @@ const changePasswordFailure = () => {
 }
 
 const signOutSuccess = (data) => {
-  $('.').text("What's Your Vibe?")
+  $('.message').text("What's Your Vibe?")
   $('#signOutModal').modal('hide')
   // store the user with a value of null as per below
   store.user = null
