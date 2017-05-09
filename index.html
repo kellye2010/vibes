@@ -29,7 +29,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Don't forget to sign up!</h4>
+          <h4 class="modal-title">Sign Up!</h4>
         </div>
         <div class="modal-body">
           <form id="sign-up">
@@ -55,7 +55,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Don't forget to sign in!</h4>
+          <h4 class="modal-title">Ready to Create Your Next Vibe? Sign In!</h4>
         </div>
         <div class="modal-body">
           <form id="sign-in">
@@ -104,7 +104,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">You can even put your password on your list!</h4>
+          <h4 class="modal-title">Keep Your Vibes Safe</h4>
         </div>
         <div class="modal-body">
           <form id="change-password">
@@ -183,8 +183,27 @@
 
       <!-- <h1>Playlist CRUD</h1> -->
 
-      <!-- Modal content-->
-      <div class="modal-content">
+          <!-- Modal content-->
+          <!-- <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Create, You Creator!</h4>
+            </div>
+            <div class="modal-body">
+              <form id="new-playlist">
+                <fieldset>
+                  <input class="playlistInputTwo" type="text" name="playlist[title]">
+                  <button class="btn btn-default snip1564" type="submit" name="submit"> CREATE </button>
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div> -->
+
+
+      <!-- Original Modal content-->
+      <!-- <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Create Your Playlist</h4>
@@ -195,8 +214,16 @@
             <button class="btn btn-default snip1564" type="submit" name="submit"> CREATE </button>
           </fieldset>
         </form>
-      </div>
+      </div> -->
 
+<!-- If all else fails, use the form below for CREATEing a playlist -->
+      <h2>Give Your Playlist a Name</h2>
+      <form id="new-playlist">
+        <fieldset>
+          <input class="playlistInputTwo" type="text" name="playlist[title]">
+          <button class="btn btn-default snip1564" type="submit" name="submit"> CREATE </button>
+        </fieldset>
+      </form>
 
 
       <h2>Show All Playlists</h2>

@@ -1,12 +1,11 @@
 'use strict'
-
 const config = require('../config.js')
 const store = require('../store.js')
-const app = require('../app.js')
+// const app = require('../app.js')
 
 const createPlaylist = function (data) {
   return $.ajax({
-    url: app.host + '/playlists',
+    url: config.apiOrigin + '/playlists',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -15,16 +14,9 @@ const createPlaylist = function (data) {
   })
 }
 
-const indexPlaylist = function () {
+const indexPlaylists = function (data) {
   return $.ajax({
-    url: app.host + '/playlists',
-    method: 'GET'
-  })
-}
-
-const showPlaylists = (data) => {
-  return $.ajax({
-    url: config.apiOrigin + '/playlists/',
+    url: config.apiOrigin + '/playlists',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -33,18 +25,29 @@ const showPlaylists = (data) => {
   })
 }
 
+// const showPlaylists = (data) => {
+//   return $.ajax({
+//     url: config.apiOrigin + '/playlists/',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data
+//   })
+// }
+
 const showPlaylist = function (id) {
   return $.ajax({
-    url: app.host + '/playlists/' + id,
+    url: config.apiOrigin + '/playlists/' + id,
     method: 'GET',
     Authorization: 'Token token=' + store.user.token
   },
-  )
+)
 }
 
 const updatePlaylist = function (data) {
   return $.ajax({
-    url: app.host + '/playlists/' + data.playlist.id,
+    url: config.apiOrigin + '/playlists/' + data.playlist.id,
     method: 'PATCH',
     data
   })
@@ -52,16 +55,16 @@ const updatePlaylist = function (data) {
 
 const destroyPlaylist = function (id) {
   return $.ajax({
-    url: app.host + '/playlists/' + id,
+    url: config.apiOrigin + '/playlists/' + id,
     method: 'DELETE'
   })
 }
 
 module.exports = {
   createPlaylist,
-  indexPlaylist,
+  indexPlaylists,
   showPlaylist,
-  showPlaylists,
+  // showPlaylists,
   updatePlaylist,
   destroyPlaylist
 }
