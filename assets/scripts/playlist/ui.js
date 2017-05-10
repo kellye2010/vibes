@@ -8,6 +8,7 @@ const createPlaylistSuccess = (data) => {
   console.log(data, 'this is data')
 
   $('input').val('')
+  $('.message').text('Playlist created!')
   // $('#newPlaylistModal').modal('hide')
   // $('.center').empty()
 }
@@ -35,8 +36,9 @@ const indexPlaylistFailure = () => {
 
 const showPlaylistSuccess = (data) => {
   console.log(data, 'this is data')
-  $('.message').text('Look at your Vibe!')
+  // $('.message').text('Look at your Vibe!')
   $('input').val('')
+  $('.message').text('Look at your Vibe!')
 }
 
 const showPlaylistFailure = () => {
@@ -49,8 +51,9 @@ const updatePlaylistSuccess = (response) => {
 }
 
 const updatePlaylistFailure = (response) => {
-  $('.message').text('Error updating playlist!')
+  // $('.message').text('Error updating playlist!')
   $('input').val('')
+  $('.message').text('Error updating playlist!')
 }
 
 const deletePlaylistSuccess = (response) => {
