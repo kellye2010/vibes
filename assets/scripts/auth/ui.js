@@ -5,6 +5,7 @@ const signUpSuccess = (data) => {
   // $('#signUpModal').modal('hide')
   $('.playlist-box').hide()
   $('input').val('')
+  $('.message').text('Signed up!')
 }
 
 const signUpFailure = () => {
@@ -12,6 +13,7 @@ const signUpFailure = () => {
   $('.playlist-box').hide()
   $('#signUpModal').modal('hide')
   $('input').val('')
+  $('.message').text('Error!')
 }
 
 // add shows where applicable
@@ -53,7 +55,7 @@ const signOutSuccess = (data) => {
 }
 
 const signOutFailure = () => {
-  $('.message').text('Sign out faulire!')
+  $('.message').text('Sign out failure!')
   $('#signOutModal').modal('hide')
 }
 
