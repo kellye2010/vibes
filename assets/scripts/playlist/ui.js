@@ -1,9 +1,8 @@
 'use strict'
 const store = require('../store.js')
 const showPlaylistsTemplate = require('../templates/playlist-listing.handlebars')
-
 // const api = require('./api.js')
-// // const getFormFields = require(`../../../lib/get-form-fields`)
+// const getFormFields = require(`../../../lib/get-form-fields`)
 
 const createPlaylistSuccess = (data) => {
   console.log(data, 'this is data')

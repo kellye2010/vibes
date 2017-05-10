@@ -1,10 +1,81 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+![logo-imgur](https://cloud.githubusercontent.com/assets/4691419/25890317/0e6b2d14-353b-11e7-9b48-358a08948e04.png)
 
-# browser-template
+# Vibes
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+- Live Deployed App: [Vibes](https://kellye2010.github.io/vibes/)
+- Live API: [Vibes API](https://vibesforyou.herokuapp.com/)
+- API GitHub Repository: [kellye2010/rails-api-vibes](https://github.com/kellye2010/rails-api-vibes)
+
+## About Vibes
+
+
+Create Playlists Inspired By Your Moods - Your Vibes.
+
+[Vibes](https://kellye2010.github.io/vibes/) lets users create customized playlists from their favorite music tracks on Spotify. Users can create a unique name for their playlist, then they can customize the playlists they’ve created by adding their favorite song tracks to the playlists.
+How It Works:
+-   (First Iteration)
+-   (First Iteration)
+-   (First Iteration)
+
+
+## Application Requirements
+
+-   Have an **API** that is securely accessible by your browser app, built using
+    frameworks covered in class
+-   Create **at least 4 RESTful routes** for handling GET, POST, PUT/PATCH, and
+    DELETE requests; Any actions which change data must be authenticated, and
+    the data must be "owned" by the user performing the change
+-   **Utilize an ORM** to create a database table structure and interact with
+    data
+-   **Use a front-end Javascript app** to communicate with your API (both read
+    and write) and render data that it receives in the browser
+-   Have **semantically clean HTML and CSS**
+-   Be **deployed online**, so that it is accessible to the public
+-   Be linked in your `pinned repositories` on your GitHub profile page
+-   Must not have any obvious user-facing errors
+-   Must not rely on refreshing the page for any functionality
+
+
+### Project Workflow
+
+-   **User Stories** : Did you complete user stories and wireframes before you
+    started writing code? Did you create a schedule for yourself to keep your
+    project on track?
+-   **Wireframes** : Did you complete user stories and wireframes before you started writing code? Did you create a schedule for yourself to keep your project on track?
+
+
+## Development Process
+ I built out the resources and relationships in the API. After, I began testing the API with CURL scripts, making further modifications to the routes, models, and controllers based on the specific functionality of the application.
+ -   [ ] After receiving the project prompt, decide what kind of app to make, and
+    begin sketching some rough wireframes for how the front end will look and
+    act.
+-   [ ] Think about what kind of data your front-end will need from your
+    back-end, and how that data will be used. Create an ERD.
+-   [ ] Create two repos that your project will use, and add READMEs to both.
+-   [ ] Create a simple front-end with HTML and CSS based (loosely) on your
+    wireframes.
+-   [ ] User our
+    [`rails-api-template`](https://github.com/ga-wdi-boston/rails-api-template)
+    for your back-end. It already includes authentication.
+-   [ ] After you have an ERD, check with a consultant to ensure your data model
+    is appropriate for your goals. Then, build the models and migrations to
+    represent this data. Test your models using the Rails console, and test your
+    API endpoints using `curl`. You may also write automated tests in RSpec if
+    you choose.
+-   [ ] Before working on the front-end application, ensure all back-end
+    endpoints work as expected. Knowing the back-end well will help you diagnose
+    bugs on the front-end.
+-   [ ] Write your front-end application using JavaScript, jQuery, and AJAX.
+-   [ ] Test, commit, and deploy often! Test, commit, deploy! Test your
+    deployments!
+-   [ ] When main features are finished, begin working on stretch goals and
+    icebox features.
+-   [ ] Finish your documentation. Make it high-quality.
+
+## Data Model (Entity Relationship Diagram)
+
+-   [Vibes ERD](https://cloud.githubusercontent.com/assets/4691419/25890338/17ebb552-353b-11e7-91e4-5a72c8dcd4eb.png)
+-   For full backend details, see the kellye2010/rails-api-vibes Github repository
 
 ## Dependencies
 
@@ -14,62 +85,18 @@ Install with `npm install`.
 -   [Bootstrap](http://getbootstrap.com)
 -   [Handlebars.js](http://handlebarsjs.com)
 
-At the beginning of each cohort, update the versions in
-[`package.json`](package.json) by replace all versions with a glob (`*`) and
-running `npm update --save && npm update --save-dev`. You may wish to test these
-changes by deleting the `node_modules` directory and running `npm install`.
-Fix any conflicts.
-
-## Installation
-
-1.  [Download](../../archive/master.zip) this template.
-1.  Unzip and rename the template directory.
-1.  Empty [`README.md`](README.md) and fill with your own content.
-1.  Move into the new project and `git init`.
-1.  Install dependencies with `npm install`.
 
 ## Structure
 
-Dependencies are stored in [`package.json`](package.json).
+Dependencies are stored in [`package.json`](package.json). Do not configure `grunt` packages configurations are stored in the
+[`grunt`](grunt) directory. JavaScript files are stored in [`assets/scripts`](assets/scripts). Styles are stored in [`assets/styles`](assets/styles) and are loaded from [`assets/styles/index.scss`](assets/styles/index.scss). [getFormFields](forms.md) are used to retrieve form data to send to an API.
+(To deploy a browser-template based SPA, run `grunt deploy`.)
 
-Do not configure `grunt` packages directly in the
-[`Gruntfile.js`](Gruntfile.js). Instead, store configurations in the
-[`grunt`](grunt) directory. You won't need a top-level key, since that's
-generated by the `Gruntfile.js` based on the filename of the configuration
-object stored in the `grunt` directory.
+## Next Steps
+Below are some of the unsolved problems that I faced, and next steps for this application
+-
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/index.js`](assets/scripts/index.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
 
-Developers should set `config.apiOrigins.production` (and
-`config.apiOrigins.development` if it differs from the default).  With
-`apiOrigins` set, developers may rely on `config.apiOrigin` as the base for API
-URLs.
-
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss).
-
-Developers should use [getFormFields](forms.md) to retrieve form data to send to
-an API.
-
-To deploy a browser-template based SPA, run `grunt deploy`.
-
-## Tasks
-
-Developers should run these often!
-
--   `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
--   `grunt reformat`: reformats all your code in a standard style
--   `grunt <server|serve|s>`: generates bundles, watches, and livereloads
--   `grunt test`: runs any automated tests, depends on `grunt build`
--   `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
 
 ## [License](LICENSE)
 

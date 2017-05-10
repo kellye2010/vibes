@@ -2,12 +2,14 @@
 const store = require('../store.js')
 
 const signUpSuccess = (data) => {
-  $('#signUpModal').modal('hide')
+  // $('#signUpModal').modal('hide')
+  $('.playlist-box').hide()
   $('input').val('')
 }
 
 const signUpFailure = () => {
   $('.message').text('Sign up failed!')
+  $('.playlist-box').hide()
   $('#signUpModal').modal('hide')
   $('input').val('')
 }
