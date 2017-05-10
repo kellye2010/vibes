@@ -1,5 +1,7 @@
 ![logo-imgur](https://cloud.githubusercontent.com/assets/4691419/25890317/0e6b2d14-353b-11e7-9b48-358a08948e04.png)
 
+App and Logo(above) created by Kelly English
+
 # Vibes
 
 - Live Deployed App: [Vibes](https://kellye2010.github.io/vibes/)
