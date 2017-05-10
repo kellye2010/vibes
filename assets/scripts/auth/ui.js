@@ -3,14 +3,14 @@ const store = require('../store.js')
 
 const signUpSuccess = (data) => {
   // $('#signUpModal').modal('hide')
-  $('.playlist-box').hide()
+  // $('.playlist-box').hide()
   $('input').val('')
   $('.message').text('Signed up!')
 }
 
 const signUpFailure = () => {
   $('.message').text('Sign up failed!')
-  $('.playlist-box').hide()
+  // $('.playlist-box').hide()
   $('#signUpModal').modal('hide')
   $('input').val('')
   $('.message').text('Error!')
@@ -19,7 +19,7 @@ const signUpFailure = () => {
 // add shows where applicable
 const signInSuccess = (data) => {
   $('.message').text('Create your playlist!')
-  $('.playlist-box').show()
+  // $('.playlist-box').show()
   $('#signInModal').modal('hide')
   $('input').val('')
   store.user = data.user
