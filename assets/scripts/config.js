@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://vibesforyou.herokuapp.com',
+    production: 'https://vibesforyou.herokuapp.com/',
     development: 'http://localhost:4741'
   }
 }
