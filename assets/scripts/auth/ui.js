@@ -1,75 +1,73 @@
 'use strict'
 const store = require('../store.js')
+const showPlaylistsTemplate = require('../templates/playlist-listing.handlebars')
+// const api = require('./api.js')
+// const getFormFields = require(`../../../lib/get-form-fields`)
 
-const signUpSuccess = (data) => {
-  // $('.playlist-box').hide()
+const createPlaylistSuccess = (data) => {
+  console.log(data, 'this is data')
+
   $('input').val('')
-  $('#signUpModal').modal('hide')
-  $('.message').text('Signed up!')
+  // $('#newPlaylistModal').modal('hide')
+  // $('.center').empty()
 }
 
-const signUpFailure = () => {
-  // $('.playlist-box').hide()
+const createPlaylistFailure = () => {
   $('input').val('')
-  $('#signUpModal').modal('hide')
-  $('.message').text('Sign up failed!')
+  // $('#newPlaylistModal').modal('hide')
+  $('.message').text('Try again')
 }
 
-// add shows where applicable
-const signInSuccess = (data) => {
-  $('input').val('')
-  store.user = data.user
-  $('#signInModal').modal('hide')
-  $('.playlist-box').show()
-  $('.sign-in-show').show()
-  $('.sign-out-show').hide()
-  $('.message').text('Create your playlist!')
+const indexPlaylistSuccess = (data) => {
+  store.playlists = data.playlists
+  const showPlaylistsHtml = showPlaylistsTemplate({ playlists: store.playlists })
+  $('#handlebars-content').empty()
+  $('#handlebars-content').append(showPlaylistsHtml)
+
+  // $('.message').text('')
 }
 
-const signInFailure = () => {
-  $('input').val('')
-  $('#signInModal').modal('hide')
-  $('.message').text('Sign in failed!')
+const indexPlaylistFailure = () => {
+  $('.message').text('')
 }
 
-const changePasswordSuccess = (data) => {
-  $('input').val('')
-  $('#changePasswordModal').modal('hide')
-  $('.message').text('Password Successfully Changed!')
-}
-
-//   // store the user object as per below
-//   store.user = data.user
-// }
-
-const changePasswordFailure = () => {
-  $('.message').text('Error Changing Password!')
-  $('#changePasswordModal').modal('hide')
+const showPlaylistSuccess = (data) => {
+  console.log(data, 'this is data')
+  $('.message').text('')
   $('input').val('')
 }
 
-const signOutSuccess = (data) => {
-  $('.message').text("What's Your Vibe?")
-  $('#signOutModal').modal('hide')
-  // store the user with a value of null as per below
-  store.user = null
-  $('.playlist-box').hide()
-  $('.sign-in-show').hide()
-  $('.sign-out-show').show()
+const showPlaylistFailure = () => {
+  $('.message').text('')
 }
 
-const signOutFailure = () => {
-  $('.message').text('Sign out failure!')
-  $('#signOutModal').modal('hide')
+const updatePlaylistSuccess = (response) => {
+  $('input').val('')
+}
+
+const updatePlaylistFailure = (response) => {
+  $('.message').text('')
+  $('input').val('')
+}
+
+const deletePlaylistSuccess = (response) => {
+  $('input').val('')
+  $('.message').text('')
+}
+
+const deletePlaylistFailure = (response) => {
+  $('.message').text('')
 }
 
 module.exports = {
-  signUpSuccess,
-  signUpFailure,
-  signInSuccess,
-  signInFailure,
-  changePasswordSuccess,
-  changePasswordFailure,
-  signOutFailure,
-  signOutSuccess
+  createPlaylistSuccess,
+  createPlaylistFailure,
+  indexPlaylistSuccess,
+  indexPlaylistFailure,
+  showPlaylistSuccess,
+  showPlaylistFailure,
+  updatePlaylistSuccess,
+  updatePlaylistFailure,
+  deletePlaylistSuccess,
+  deletePlaylistFailure
 }

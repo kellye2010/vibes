@@ -1,5 +1,7 @@
 ![logo-imgur](https://cloud.githubusercontent.com/assets/4691419/25890317/0e6b2d14-353b-11e7-9b48-358a08948e04.png)
 
+App and Logo(above) created by Kelly English
+
 # Vibes
 
 - Live Deployed App: [Vibes](https://kellye2010.github.io/vibes/)
@@ -13,9 +15,8 @@ Create Playlists Inspired By Your Moods - Your Vibes.
 
 [Vibes](https://kellye2010.github.io/vibes/) lets users create customized playlists from their favorite music tracks on Spotify. Users can create a unique name for their playlist, then they can customize the playlists they’ve created by adding their favorite song tracks to the playlists.
 How It Works:
--   (First Iteration)
--   (First Iteration)
--   (First Iteration)
+-   (First Iteration) Currently, a user is only able to create a playlist with a title attribute.
+-   (Second Iteration) The user will be able to add songs to the playlist they've created using the Spotify API.
 
 
 ## Application Requirements
@@ -36,41 +37,33 @@ How It Works:
 -   Must not rely on refreshing the page for any functionality
 
 
-### Project Workflow
+## Project Workflow
 
--   **User Stories** : Did you complete user stories and wireframes before you
-    started writing code? Did you create a schedule for yourself to keep your
-    project on track?
--   **Wireframes** : Did you complete user stories and wireframes before you started writing code? Did you create a schedule for yourself to keep your project on track?
+### User Stories
+-   As I user I want to:
+-     Sign-up & Login
+-     Create a playlist with a unique title
+-     Get a list of ALL of MY saved playlists
+-     Update my playlist titles
+-     Delete my playlist
+-     Change my password
+-     Sign-out and have my information saved for the next time I log in (user credentials and playlists)
+-     Add song(s) from Spotify to my new playlist (Not Complete)
+-     Add song(s) from Spotify to my existing playlist (Not Complete)
+-     Delete songs from a playlist (Not Complete)
+-     Delete my playlist (and the songs in that playlist) (Not Complete)
+
+### Wireframes
+-   Original Login/Signup: http://imgur.com/xIMC1mg
+-   Original User Playlist view: http://imgur.com/ZiL4HWn
+-   Playlist CRUD actions flow: http://imgur.com/bAWv9mP
 
 
 ## Development Process
- I built out the resources and relationships in the API. After, I began testing the API with CURL scripts, making further modifications to the routes, models, and controllers based on the specific functionality of the application.
- -   [ ] After receiving the project prompt, decide what kind of app to make, and
-    begin sketching some rough wireframes for how the front end will look and
-    act.
--   [ ] Think about what kind of data your front-end will need from your
-    back-end, and how that data will be used. Create an ERD.
--   [ ] Create two repos that your project will use, and add READMEs to both.
--   [ ] Create a simple front-end with HTML and CSS based (loosely) on your
-    wireframes.
--   [ ] User our
-    [`rails-api-template`](https://github.com/ga-wdi-boston/rails-api-template)
-    for your back-end. It already includes authentication.
--   [ ] After you have an ERD, check with a consultant to ensure your data model
-    is appropriate for your goals. Then, build the models and migrations to
-    represent this data. Test your models using the Rails console, and test your
-    API endpoints using `curl`. You may also write automated tests in RSpec if
-    you choose.
--   [ ] Before working on the front-end application, ensure all back-end
-    endpoints work as expected. Knowing the back-end well will help you diagnose
-    bugs on the front-end.
--   [ ] Write your front-end application using JavaScript, jQuery, and AJAX.
--   [ ] Test, commit, and deploy often! Test, commit, deploy! Test your
-    deployments!
--   [ ] When main features are finished, begin working on stretch goals and
-    icebox features.
--   [ ] Finish your documentation. Make it high-quality.
+
+Received the project requirements, began sketching some rough wireframes for how the front end will look and act for the user. Created an ERD for the back-end (http://imgur.com/MhC0kfq) based on the data that would be needed from the user in the front-end of the application. Created application repos for both the back-end API and the front-end client. Attempted to create a front-end based on the wireframes crated, but design changed for the timeframe of the project. Used     [`rails-api-template`](https://github.com/ga-wdi-boston/rails-api-template) for your back-end provided by GA, which already included authentication. I built out the models and migrations for the resources and relationships  in the API I wanted to represent based on my ERD. After, I began testing the API endpoints with CURL scripts, and tested models using 'rails console', making further modifications to the routes, models, and controllers based on the specific functionality of the application. I ensured the backend was working fine and deployed the database to Heroku, then bean working on the front-end using JavaScript, jQuery, and AJAX.
+
+Challenges faced determining which routes to settle on (when thinking about future app functionality), which is why planning is so important. The user stories determine which routes you should use, and the developer should stick to that until they've accomplished their most front-facing/initial goals and requirements defined.
 
 ## Data Model (Entity Relationship Diagram)
 
@@ -93,9 +86,8 @@ Dependencies are stored in [`package.json`](package.json). Do not configure `gru
 (To deploy a browser-template based SPA, run `grunt deploy`.)
 
 ## Next Steps
-Below are some of the unsolved problems that I faced, and next steps for this application
--
 
+Nexts steps for this application will include adding resources such as playlist songs, songs, and artists and connecting to the Spotify API to enable th user to create playlists on vibes using songs from Spotify. The incomplete user stories (annotated above) will be included in next steps for this application as well.
 
 
 ## [License](LICENSE)
