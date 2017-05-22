@@ -2,37 +2,40 @@
 const store = require('../store.js')
 
 const signUpSuccess = (data) => {
-  // $('#signUpModal').modal('hide')
-  $('.playlist-box').hide()
+  // $('.playlist-box').hide()
   $('input').val('')
+  $('#signUpModal').modal('hide')
+  $('.message').text('Signed up!')
 }
 
 const signUpFailure = () => {
-  $('.message').text('Sign up failed!')
-  $('.playlist-box').hide()
-  $('#signUpModal').modal('hide')
+  // $('.playlist-box').hide()
   $('input').val('')
+  $('#signUpModal').modal('hide')
+  $('.message').text('Sign up failed!')
 }
 
 // add shows where applicable
 const signInSuccess = (data) => {
-  $('.message').text('Create your playlist!')
-  $('.playlist-box').show()
-  $('#signInModal').modal('hide')
   $('input').val('')
   store.user = data.user
+  $('#signInModal').modal('hide')
+  $('.playlist-box').show()
+  $('.sign-in-show').show()
+  $('.sign-out-show').hide()
+  $('.message').text('Create your playlist!')
 }
 
 const signInFailure = () => {
-  $('.message').text('Sign in failed!')
-  $('#signInModal').modal('hide')
   $('input').val('')
+  $('#signInModal').modal('hide')
+  $('.message').text('Sign in failed!')
 }
 
 const changePasswordSuccess = (data) => {
-  $('.message').text('Password Successfully Changed!')
-  $('#changePasswordModal').modal('hide')
   $('input').val('')
+  $('#changePasswordModal').modal('hide')
+  $('.message').text('Password Successfully Changed!')
 }
 
 //   // store the user object as per below
@@ -50,10 +53,13 @@ const signOutSuccess = (data) => {
   $('#signOutModal').modal('hide')
   // store the user with a value of null as per below
   store.user = null
+  $('.playlist-box').hide()
+  $('.sign-in-show').hide()
+  $('.sign-out-show').show()
 }
 
 const signOutFailure = () => {
-  $('.message').text('Sign out faulire!')
+  $('.message').text('Sign out failure!')
   $('#signOutModal').modal('hide')
 }
 

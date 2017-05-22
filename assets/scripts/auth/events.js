@@ -55,6 +55,8 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
   // $('#button').on('submit', addPlaylist)
+  $('.playlist-box').hide()
+  $('.sign-in-show').hide()
 }
 
 module.exports = {
