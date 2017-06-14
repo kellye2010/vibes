@@ -65,6 +65,14 @@ const onDeletePlaylist = function (event) {
   }
 }
 
+// const addPlaylist = function (event) {
+//   const data = getFormFields(this)
+//   event.preventDefault()
+//   api.addPlaylist(data)
+//     .then(ui.addPlaylistSuccess)
+//     .catch(ui.addPlaylistFailure)
+// }
+
 const addHandlers = () => {
   $('#new-playlist').on('submit', onCreatePlaylist)
   $('#playlists-search').on('submit', onGetPlaylists)

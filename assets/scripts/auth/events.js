@@ -11,13 +11,14 @@ const onSignUp = function (event) {
     .then(ui.signUpSuccess)
     .then(() => {
       api.signIn(data)
-      .then(ui.signInSuccess)
-      .catch(ui.signInFailure)
+        .then(ui.signInSuccess)
+        .catch(ui.signInFailure)
     })
     .catch(ui.signUpFailure)
 }
 
 const onSignIn = function (event) {
+  event.preventDefault()
   const data = getFormFields(this)
   event.preventDefault()
   api.signIn(data)
@@ -26,28 +27,20 @@ const onSignIn = function (event) {
 }
 
 const onChangePassword = function (event) {
-  const data = getFormFields(this)
   event.preventDefault()
+  const data = getFormFields(this)
   api.changePassword(data)
-      .then(ui.changePasswordSuccess)
-      .catch(ui.changePasswordFailure)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
 }
 
 const onSignOut = function (event) {
-  const data = getFormFields(this)
   event.preventDefault()
+  const data = getFormFields(this)
   api.signOut(data)
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
-
-// const addPlaylist = function (event) {
-//   const data = getFormFields(this)
-//   event.preventDefault()
-//   api.addPlaylist(data)
-//     .then(ui.addPlaylistSuccess)
-//     .catch(ui.addPlaylistFailure)
-// }
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
