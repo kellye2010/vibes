@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vibes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
+
+  <nav>
+    <button type="button" class="btn btn btn-default sign-out-show" data-toggle="modal" data-target="#signUpModal">Sign up</button>
+    <button type="button" class="btn btn btn-default sign-out-show" data-toggle="modal" data-target="#signInModal">Sign in</button>
+    <button type="button" class="btn btn btn-default sign-in-show" data-toggle="modal" data-target="#signOutModal">Sign out</button>
+    <button type="button" class="btn btn btn-default sign-in-show" data-toggle="modal" data-target="#changePasswordModal">Change Password</button>
+  </nav>
+
+  <!-- Sign Up Modal -->
+  <div id="signUpModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sign Up!</h4>
+        </div>
+        <div class="modal-body">
+          <form id="sign-up">
+            <fieldset>
+              <input name="credentials[email]" type="text" placeholder="create account">
+              <input name="credentials[password]" type="password" placeholder="password">
+              <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+              <button class="btn btn-transparent-three" type="submit" name="submit">Sign Up!</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Sign in Modal -->
+  <div id="signInModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Ready to Create Your Next Vibe? Sign In!</h4>
+        </div>
+        <div class="modal-body">
+          <form id="sign-in">
+            <fieldset>
+              <input name="credentials[email]" type="text" placeholder="your username">
+              <input name="credentials[password]" type="password" placeholder="password">
+              <button class="btn btn-transparent-three" type="submit" name="submit">Sign In!</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Out Modal -->
+  <div id="signOutModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Are you sure want to sign out?</h4>
+        </div>
+        <div class="modal-body">
+          <form id="sign-out">
+            <fieldset>
+              <button class="btn btn-transparent-three" type="submit" name="submit">Sign Out!</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Change Password Modal -->
+  <div id="changePasswordModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Keep Your Vibes Safe</h4>
+        </div>
+        <div class="modal-body">
+          <form id="change-password">
+            <fieldset>
+              <input name="passwords[old]" type="password" placeholder="old password">
+              <input name="passwords[new]" type="password" placeholder=" new password">
+              <button class="btn btn-transparent-three" type="submit" name="submit">Change Password!</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="message"></h3>
+  <div class="vibes-description-box">
+    <h2>Create Playlists Inspired By Your Moods - Your Vibes.</h2>
+
+    <h4>Vibes lets users create customized playlists from their favorite music tracks on Spotify. Users can create a unique name for their playlist, then they can customize the playlists they’ve created by adding their favorite song tracks to the playlists.</h4>
+  </div>
+
+
+  <div class="playlist-box sign-in-show">
+
+    <h1>Playlist Actions</h1>
+    <!-- <form class='user-playlists'>
+      <button type="submit" class="btn btn-default">Get all Playlists</button>
+    </form> -->
+    <div>
+
+      <!-- If all else fails, use the form below for CREATEing a playlist -->
+      <h2>Give Your Playlist a Name</h2>
+      <form id="new-playlist">
+        <fieldset>
+          <input class="playlistInputTwo" type="text" name="playlist[title]">
+          <button class="btn btn-default snip1564" type="submit" name="submit"> CREATE </button>
+        </fieldset>
+      </form>
+
+
+      <h2>Show All Playlists</h2>
+      <form class='playlists' id='playlists-search'>
+        <div class="form-group">
+        </div>
+        <button type="submit" class="btn btn-default snip1564">Get All Playlists</button>
+      </form>
+
+      <br />
+
+      <h2>Show A Playlist</h2>
+      <form class='playlists' id='playlist-search'>
+        <div class="form-group">
+          <input type="text" name="playlist[id]" id="playlist-id" placeholder="Playlist ID Here">
+        </div>
+        <button type="submit" class="btn btn-default snip1564">Get Playlist</button>
+      </form>
+
+      <div id='handlebars-content'></div>
+
+      <h2>Update A Playlist</h2>
+      <form class='playlists' id='playlist-update'>
+        <div class="form-group">
+          <input type="text" name="playlist[id]" id="playlist-id-update" placeholder="Playlist ID Here">
+          <!-- <input type="text" name="book[title]" author="book-title-update" placeholder="Playlist Title Here"> -->
+          <input type="text" name="playlist[title]" title="playlist-title-update" placeholder="Playlist Title Here">
+          <!-- <input type="text" name="book[author]" author="book-author-update" placeholder="Resource Author Here"> -->
+        </div>
+        <button type="submit" class="btn btn-default snip1564">Update Playlist</button>
+      </form>
+
+      <h2>Delete A Playlist</h2>
+      <form class='playlists' id='playlist-delete'>
+        <div class="form-group">
+          <input type="text" name="playlist[id]" id="playlist-id-delete" placeholder="Playlist ID Here">
+        </div>
+        <button type="submit" class="btn btn-default snip1564">Delete Playlist</button>
+      </form>
+
+
+    </div>
+  </div>
+
+  <footer>
+    <p class="footer">Developed By Kelly English-James @ GA Boston</p>
+  </footer>
+</body>
+
+</html>
